@@ -139,6 +139,14 @@ img {
   transform: scaleX(1);
 }
 
+.links a.active {
+  color: #f8fbff;
+}
+
+.links a.active::after {
+  transform: scaleX(1);
+}
+
 .hero {
   padding-top: 50px;
 }
@@ -390,6 +398,17 @@ main > section {
 .social-links a:hover {
   background: rgba(255,255,255,0.03);
   color: #f3f7ff;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 700px) {
